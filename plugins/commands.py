@@ -46,7 +46,6 @@ def get_size(size):
 
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
-    user = message.from_user
     # Check for force subscription
     Fsub = await ForceSub(client, message)
     if Fsub == 400:
